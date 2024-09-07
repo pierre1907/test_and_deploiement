@@ -1,4 +1,4 @@
-package me.essejacques.demotestdeploy;
+package me.ksi.demotestdeploy;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

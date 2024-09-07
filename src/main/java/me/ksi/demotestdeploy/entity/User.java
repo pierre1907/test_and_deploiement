@@ -1,4 +1,4 @@
-package me.essejacques.demotestdeploy.entity;
+package me.ksi.demotestdeploy.entity;
 
 
 public class User {
@@ -6,6 +6,10 @@ public class User {
     private String name;
     private String adresse;
     private String password;
+
+
+    public User() {
+    }
 
     public User(Long id, String name, String adresse, String password) {
         this.id = id;

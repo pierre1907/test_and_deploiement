@@ -1,7 +1,8 @@
-package me.essejacques.demotestdeploy.karate;
+package me.ksi.demotestdeploy.karate;
+
+import org.springframework.boot.test.context.SpringBootTest;
 
 import com.intuit.karate.junit5.Karate;
-import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class UserKarateTests {

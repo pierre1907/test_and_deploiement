@@ -1,4 +1,4 @@
-package me.essejacques.demotestdeploy;
+package me.ksi.demotestdeploy;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

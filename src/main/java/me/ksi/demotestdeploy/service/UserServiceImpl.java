@@ -1,21 +1,23 @@
-package me.essejacques.demotestdeploy.service;
-
-import me.essejacques.demotestdeploy.entity.User;
-import org.springframework.stereotype.Service;
+package me.ksi.demotestdeploy.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.random.RandomGenerator;
+
+import org.springframework.stereotype.Service;
+
+import me.ksi.demotestdeploy.entity.User;
 
 
 @Service
 public class UserServiceImpl implements UserService {
 
-    List<User> users = new ArrayList<>(
+    private List<User> users = new ArrayList<>(
             List.of(new User(1L, "Jordane", "john@doe.com", "123456"),
                     new User(2L, "Jane", "jane@doe.com", "123456"),
                     new User(3L, "Bob", "bob@doe.com", "123456"))
     );
+
+    private long idCounter = 4;  // Commence à 4 puisque 1, 2, et 3 sont déjà utilisés
 
     /**
      * @param user
@@ -23,8 +25,9 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public User saveUser(User user) {
-        //user.setId(RandomGenerator.getDefault().nextLong());
-        //user.setName("Jacques " + user.getName());
+        if (user.getId() == null) {
+            user.setId(idCounter++);  // Attribue un ID unique incrémental
+        }
         users.add(user);
         return user;
     }
